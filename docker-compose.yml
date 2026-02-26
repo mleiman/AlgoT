@@ -1,0 +1,5 @@
+services:
+    algot:
+        build: .
+        container_name: algoT
+        restart: unless-stopped

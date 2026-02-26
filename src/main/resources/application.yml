@@ -1,0 +1,6 @@
+spring:
+    application:
+        name: "AlgoT"
+
+binance:
+    url: "https://api.binance.com/api/v3/"

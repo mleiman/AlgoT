@@ -8,6 +8,11 @@ group = 'io.github.mleiman'
 version = '0.0.1-SNAPSHOT'
 description = 'AlgoT'
 
+// Remove plain jar
+jar {
+    enabled = false
+}
+
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(25)
