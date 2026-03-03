@@ -72,8 +72,8 @@ public class TouchAndTurnStrategy {
 	private BigDecimal calculateStopLoss(BigDecimal fibLevel, BigDecimal entry, boolean isUptrend) {
 		BigDecimal risk = fibLevel.subtract(entry).abs();
 		if (isUptrend) {
-			return entry.subtract(risk.divide(BigDecimal.valueOf(2), 2, RoundingMode.HALF_UP));
+			return entry.add(risk.divide(BigDecimal.valueOf(2), 2, RoundingMode.HALF_UP));
 		}
-		return entry.add(risk.divide(BigDecimal.valueOf(2), 2, RoundingMode.HALF_UP));
+		return entry.subtract(risk.divide(BigDecimal.valueOf(2), 2, RoundingMode.HALF_UP));
 	}
 }
