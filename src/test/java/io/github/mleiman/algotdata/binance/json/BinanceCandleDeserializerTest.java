@@ -1,13 +1,10 @@
 package io.github.mleiman.algotdata.binance.json;
 
 
-import io.github.mleiman.algot.data.binance.json.BinanceCandleDeserializer;
 import io.github.mleiman.algot.model.candle.Candle;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import tools.jackson.core.JsonParser;
 import tools.jackson.databind.ObjectMapper;
-import tools.jackson.databind.module.SimpleModule;
 
 import java.math.BigDecimal;
 import java.time.Instant;
