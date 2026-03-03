@@ -23,14 +23,14 @@ public class TouchAndTurnStrategy {
 
 	public void test() throws IllegalStateException {
 		ZonedDateTime now = ZonedDateTime.now(ZoneId.of("UTC-5"));
-				//withDayOfMonth(28).withMonth(2);
+		//withDayOfMonth(28).withMonth(2);
 		Candle m15 = binanceClient.fetchCandles(CandleRequest.builder()
-						.limit(1)
-						.interval(ChartInterval.M15)
-						.symbol("BTCUSDT")
-						.timeZone("-5")
-						.startTime(now
-								.minusDays(1).withHour(9).withMinute(30).withSecond(0))
+				.limit(1)
+				.interval(ChartInterval.M15)
+				.symbol("BTCUSDT")
+				.timeZone("-5")
+				.startTime(now
+						.minusDays(1).withHour(9).withMinute(30).withSecond(0))
 				.build()).getFirst();
 
 		boolean isUptrend = TradingCalculatorUtils.isUptrend(m15);
